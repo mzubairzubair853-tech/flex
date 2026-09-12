@@ -1,0 +1,71 @@
+```css
+.container {
+    width: 100%;
+    height: 200px;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation:
+        colorChanging 0.5s 2s,
+        rotating 2s 2s infinite linear;
+}
+
+.box {
+    width: 70px;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+@keyframes colorChanging {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: green;
+    }
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-center {
+    animation: rotate-center 2s ease-in-out infinite;
+}
+
+@keyframes rotate-center {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
